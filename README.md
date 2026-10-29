@@ -1,4 +1,4 @@
-\# AuthenticationLab
+\# AuthenticationLab — ветка conflict-test
 
 
 
