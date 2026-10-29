@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="AuthenticationLab.Tests/AuthenticationLab.Tests.csproj" Id="381d34d8-cac7-4b47-a06d-024361c5f1b9" />
+  <Project Path="AuthenticationLab/AuthenticationLab.csproj" Id="bd8ad27f-64f6-4019-9fca-7e63e90df4a5" />
+</Solution>
