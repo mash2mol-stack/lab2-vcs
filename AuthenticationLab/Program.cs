@@ -135,6 +135,7 @@ namespace AuthenticationLab
                 Console.WriteLine();
                 Console.WriteLine("Результаты сохранены в authentication.json");
                 Console.WriteLine("Журнал работы сохранён в logs/app.log");
+                AuthenticationStatistics.PrintSummary(History);
             }
             catch (Exception ex)
             {
