@@ -1,26 +1,13 @@
-\# AuthenticationLab — основная версия
+# AuthenticationLab
 
-
-
-\## Описание
-
-
+## Описание
 
 Проект предназначен для демонстрации различных способов аутентификации пользователей.
 
+## Используемые технологии
 
-
-\## Используемые технологии
-
-
-
-\- C#
-
-\- .NET Framework 4.8
-
-\- Serilog
-
-\- Newtonsoft.Json
-
-\- xUnit
-
+- C#
+- .NET Framework 4.8
+- Serilog
+- Newtonsoft.Json
+- xUnit
