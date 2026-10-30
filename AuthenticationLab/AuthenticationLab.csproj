@@ -79,6 +79,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthenticationLogger.cs" />
     <Compile Include="AuthenticationService.cs" />
     <Compile Include="AuthenticationStatistics.cs" />
     <Compile Include="Credentials.cs" />

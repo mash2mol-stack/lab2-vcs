@@ -191,20 +191,7 @@ namespace AuthenticationLab
 
             File.WriteAllText(JsonFile, json);
 
-            if (success)
-            {
-                Log.Information(
-                    "Аутентификация успешна. Способ: {Method}",
-                    method
-                );
-            }
-            else
-            {
-                Log.Warning(
-                    "Аутентификация не пройдена. Способ: {Method}",
-                    method
-                );
-            }
+            AuthenticationLogger.LogAuthenticationResult(method, success);
         }
     }
 }
