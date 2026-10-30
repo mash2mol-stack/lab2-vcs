@@ -1,0 +1,40 @@
+
+name: AuthenticationLab CI
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    name: Build and test
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v2
+
+      - name: Restore NuGet packages for main project
+        run: nuget restore AuthenticationLab/packages.config -PackagesDirectory packages
+
+      - name: Restore test project dependencies
+        run: dotnet restore AuthenticationLab.Tests/AuthenticationLab.Tests.csproj
+
+      - name: Build main project
+        run: msbuild AuthenticationLab/AuthenticationLab.csproj /p:Configuration=Release /p:Platform=AnyCPU
+
+      - name: Run xUnit tests
+        run: dotnet test AuthenticationLab.Tests/AuthenticationLab.Tests.csproj --configuration Release --no-restore
