@@ -81,6 +81,7 @@
   <ItemGroup>
     <Compile Include="AuthenticationLogger.cs" />
     <Compile Include="AuthenticationService.cs" />
+    <Compile Include="AuthenticationStatistics.cs" />
     <Compile Include="Credentials.cs" />
     <Compile Include="FingerprintAuthenticator.cs" />
     <Compile Include="IAuthenticator.cs" />
